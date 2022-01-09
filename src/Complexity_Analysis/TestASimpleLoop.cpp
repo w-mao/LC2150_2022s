@@ -2,7 +2,7 @@
 using namespace std;
 
 int testASimpleLoop(){
-	int a[5] {0, 1, 2, 3, 4};
+	int a[5] = {0, 1, 2, 3, 4};
 
 	// Case 1
 	int sum1 = 0;

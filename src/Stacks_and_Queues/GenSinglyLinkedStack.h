@@ -6,7 +6,7 @@
  */
 
 #ifndef SINGLY_LINKED_STACK
-#define SINGLY_LINKED_DSTACK
+#define SINGLY_LINKED_STACK
 
 #include "StackException.h"
 #include "../Linked_Lists/GenSLList.h"
@@ -56,4 +56,4 @@ template <typename E> void SLinkedStack<E>::pop() {
 }
 
 
-#endif /* SINGLY_LINKED_DSTACK */
+#endif /* SINGLY_LINKED_STACK */

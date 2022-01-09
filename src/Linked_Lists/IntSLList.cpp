@@ -7,7 +7,7 @@
 
 //************************ IntSLList.cpp **************************
 #include <iostream>
-#include "intSLList.h"
+#include "./IntSLList.h"
 
 IntSLList::~IntSLList() {
 	for (IntSLLNode *p; !isEmpty(); ) {

@@ -8,7 +8,7 @@
 
 
 #include <iostream>
-#include "intSLList.h"
+#include "IntSLList.h"
 using namespace std;
 
 int testIntSLList()
