@@ -9,6 +9,9 @@
 
 #include <iostream>
 
+#include "Assignments/AllTests.h"
+#include "Labs/AllTests.h"
+
 #include "Object-Oriented_Programming/AllTests.h"
 #include "Complexity_Analysis/AllTests.h"
 #include "Linked_Lists/AllTests.h"
@@ -29,6 +32,7 @@ int main() {
 	*/
 
 	//testGeometricObject(); // Test Inheritance
+	//testVisibility();
 	//testPointer();
 	//testPolymorphism();
 	//testGenericMaxValue(); // function template
@@ -74,6 +78,17 @@ int main() {
 	//testPower();
 	//testBinarySearch();
 	//testTowersOfHanoi();
+
+
+	// Assign 0
+	//testDerivedTriangle();
+
+	/*
+	 * Labs
+	 */
+	//findCombinations();
+	//testRepeatDigit ();
+	test_mystery ();
 
 
 	return 0;
