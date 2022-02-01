@@ -22,37 +22,45 @@ public:
 	bool isEmpty() const; // is the stack empty?
 	const E& top() const; // the top element
 	void push(const E& e); // push element onto stack
-	void pop(); // pop the stack
+	E pop(); // pop the stack
 private: // member data
 	SLinkedList<E> S; // linked list of elements
 	int n; // number of elements
 };
 
-template <typename E> SLinkedStack<E>::SLinkedStack()
+template <typename E>
+SLinkedStack<E>::SLinkedStack()
 : S(), n(0) { } // constructor
 
-template <typename E> int SLinkedStack<E>::size() const
+template <typename E>
+int SLinkedStack<E>::size() const
 { return n; } // number of items in the stack
 
-template <typename E> bool SLinkedStack<E>::isEmpty() const
+template <typename E>
+bool SLinkedStack<E>::isEmpty() const
 { return n == 0; } // is the stack empty?
 
 // get the top element
-template <typename E> const E& SLinkedStack<E>::top() const {
+template <typename E>
+const E& SLinkedStack<E>::top() const {
 	if (isEmpty()) throw StackEmpty("Top of empty stack");
 	return S.front();
 }
 // push an element into the stack
-template <typename E> void SLinkedStack<E>::push(const E& e) { // push element onto stack
+template <typename E>
+void SLinkedStack<E>::push(const E& e) { // push element onto stack
 	++n;
 	S.addFront(e);
 }
 
 // pop the stack
-template <typename E> void SLinkedStack<E>::pop() {
+template <typename E>
+E SLinkedStack<E>::pop() {
 	if (isEmpty()) throw StackEmpty("Pop from empty stack");
 	--n;
+	E el = S.front();
 	S.removeFront();
+	return el;
 }
 
 

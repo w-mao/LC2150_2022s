@@ -7,46 +7,45 @@
 
 
 //***************************** GenDLList.h ***************************
-#ifndef DOUBLY_LINKED_LIST
-#define DOUBLY_LINKED_LIST
+#ifndef DOUBLY_LINKED_LAB_LIST
+#define DOUBLY_LINKED_LAB_LIST
 
 template<class T>
-class DLLNode {
+class DLLNodeLab {
 public:
-	DLLNode() {
+	DLLNodeLab() {
 		next = prev = nullptr;
 	}
-	DLLNode(const T& el, DLLNode *n = nullptr, DLLNode *p = nullptr) {
+	DLLNodeLab(const T& el, DLLNodeLab *n = nullptr, DLLNodeLab *p = nullptr) {
 		info = el; next = n; prev = p;
 	}
 	T info;
-	DLLNode *next, *prev;
+	DLLNodeLab *next, *prev;
 };
 
 template<class T>
-class DoublyLinkedList {
+class DoublyLinkedListLab {
 public:
-	DoublyLinkedList() {
+	DoublyLinkedListLab() {
 		head = tail = nullptr;
 	}
 	void addToDLLTail(const T&);
 	T deleteFromDLLTail();
-
-protected:
-	DLLNode<T> *head, *tail;
+public:
+	DLLNodeLab<T> *head, *tail;
 };
 
 template<class T>
-void DoublyLinkedList<T>::addToDLLTail(const T& el) {
+void DoublyLinkedListLab<T>::addToDLLTail(const T& el) {
 	if (tail != nullptr) {
-		tail = new DLLNode<T>(el,nullptr,tail);
+		tail = new DLLNodeLab<T>(el,nullptr,tail);
 		tail->prev->next = tail;
 	}
-	else head = tail = new DLLNode<T>(el);
+	else head = tail = new DLLNodeLab<T>(el);
 }
 
 template<class T>
-T DoublyLinkedList<T>::deleteFromDLLTail() {
+T DoublyLinkedListLab<T>::deleteFromDLLTail() {
 	T el = tail->info;
 	if (head == tail) { // if only one node in the list;
 		delete head;

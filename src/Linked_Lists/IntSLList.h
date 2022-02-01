@@ -14,9 +14,9 @@ class IntSLLNode {
 public:
 	IntSLLNode() {
 		info = 0;
-		next = 0;
+		next = nullptr;
 	}
-	IntSLLNode(int el, IntSLLNode *ptr = 0) {
+	IntSLLNode(int el, IntSLLNode *ptr = nullptr) {
 		info = el; next = ptr;
 	}
 	int info;
@@ -26,11 +26,11 @@ public:
 class IntSLList {
 public:
 	IntSLList() {
-		head = tail = 0;
+		head = tail = nullptr;
 	}
 	~IntSLList();
 	int isEmpty() {
-		return head == 0;
+		return head == nullptr;
 	}
 	void addToHead(int);
 	void addToTail(int);

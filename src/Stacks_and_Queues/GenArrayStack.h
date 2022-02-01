@@ -21,8 +21,6 @@ public:
 
 
 
-
-
 template <typename E>
 class ArrayStack {
 	enum { DEF_CAPACITY = 100 }; // default stack capacity
@@ -32,7 +30,7 @@ public:
 	bool isEmpty() const; // is the stack empty?
 	const E& top() const; // get the top element
 	void push(const E& e); // push element onto stack
-	void pop(); // pop the stack
+	E pop(); // pop the stack
 	// . . .housekeeping functions omitted
 private: // member data
 	E* S; // array of stack elements
@@ -62,9 +60,11 @@ void ArrayStack<E>::push(const E& e){
 }
 
 template <typename E> // pop the stack
-void ArrayStack<E>::pop(){
+E ArrayStack<E>::pop(){
 	if (isEmpty()) throw StackEmpty("Pop from empty stack");
+	E el = S[t];
 	--t;
+	return el;
 }
 
 #endif

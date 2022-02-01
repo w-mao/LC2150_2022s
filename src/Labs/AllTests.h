@@ -12,6 +12,7 @@
 int findCombinations();
 int testRepeatDigit ();
 int test_mystery ();
+int linkedListFun();
 
 
 #endif /* LABS_ALLTESTS_H_ */

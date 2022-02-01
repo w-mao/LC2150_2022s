@@ -10,6 +10,6 @@
 
 
 int testDerivedTriangle();
-
+int testGenDLList();
 
 #endif /* ASSIGNMENTS_ALLTESTS_H_ */

@@ -9,8 +9,10 @@
 using namespace std;
 int mystery(int a, int b)
 {
-	if (b == 1)
+	if (b == 1){
 		cout<< (a) << endl;
+		return 0;
+	}
 	else
 	{
 		cout << (a * a) << endl;

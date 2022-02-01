@@ -8,6 +8,7 @@
 #ifndef LINKED_LISTS_GENSLLIST_H_
 #define LINKED_LISTS_GENSLLIST_H_
 
+
 template <typename E>
 class SLinkedList;
 
@@ -34,11 +35,11 @@ private:
 
 template <typename E>
 SLinkedList<E>::SLinkedList() // constructor
-: head(NULL) { }
+: head(nullptr) { }
 
 template <typename E>
 bool SLinkedList<E>::empty() const // is list empty?
-{ return head == NULL; }
+{ return head == nullptr; }
 
 template <typename E>
 const E& SLinkedList<E>::front() const // return front element

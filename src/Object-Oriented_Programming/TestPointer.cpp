@@ -19,9 +19,8 @@ int testPointer()
 	cout << "The address of count is " << pCount++ << endl;
 	cout << "The value of count is " << *pCount << endl;
 
-
+	pCount = 0;
 	delete pCount;
-	cout<< "After executing delete pCount, pointer pCount still keeps the address: " << pCount << endl;
-
+	//cout<< "If there is no "pCount = 0", after executing delete pCount, pointer pCount will still keep the address: " << pCount << endl;
 	return 0;
 }

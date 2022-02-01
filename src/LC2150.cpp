@@ -17,6 +17,7 @@
 #include "Linked_Lists/AllTests.h"
 #include "Stacks_and_Queues/AllTests.h"
 #include "Recursion/AllTests.h"
+#include "Sorting/AllTests.h"
 //#include "Recursion/ComputeFactorial.h"
 
 
@@ -79,9 +80,15 @@ int main() {
 	//testBinarySearch();
 	//testTowersOfHanoi();
 
+	/*
+	 * Sorting
+	 */
+
+	testVariousSortingMethods();
 
 	// Assign 0
 	//testDerivedTriangle();
+	//testGenDLList();
 
 	/*
 	 * Labs
@@ -89,6 +96,8 @@ int main() {
 	//findCombinations();
 	//testRepeatDigit ();
 	test_mystery ();
+	//linkedListFun();
+
 
 
 	return 0;
