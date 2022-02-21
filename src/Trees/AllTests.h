@@ -8,8 +8,7 @@
 #ifndef TREES_ALLTESTS_H_
 #define TREES_ALLTESTS_H_
 
-
-
+int testBST();
 
 
 #endif /* TREES_ALLTESTS_H_ */

@@ -7,8 +7,8 @@
 
 //***********************  genBST.h  *************************
 //                 generic binary search tree
-#include "Stacks_and_Queues/GenListQueue.h"
-#include "Stacks_and_Queues/GenListStack.h"
+#include "../Stacks_and_Queues/GenListQueue.h"
+#include "../Stacks_and_Queues/GenListStack.h"
 #include <iostream>
 using namespace std;
 
@@ -54,8 +54,9 @@ public:
 		clear();
 	}
 	void clear() {
-		clear(root);
-		root = nullptr;
+		//clear(root);
+		//root = nullptr;
+		//Delete all elements
 	}
 	bool isEmpty() const {
 		return root == nullptr;
@@ -76,7 +77,7 @@ public:
 	void iterativePreorder();
 	void iterativeInorder();
 	void iterativePostorder();
-	void MorrisInorder();
+	//void MorrisInorder();
 	void insert(const T&);
 	void deleteByMerging(BSTNode<T>*&);
 	void findAndDeleteByMerging(const T&);
@@ -85,7 +86,7 @@ public:
 
 protected:
 	BSTNode<T>* root;
-	void clear(BSTNode<T>*);
+	//void clear(BSTNode<T>*);
 	T* search(BSTNode<T>*, const T&) const; // Figure 6.9
 	void preorder(BSTNode<T>*);
 	void inorder(BSTNode<T>*);
@@ -194,31 +195,31 @@ void BST<T>::iterativeInorder() {
 	}
 }
 
-template<class T>
-void BST<T>::MorrisInorder() {
-	BSTNode<T> *p = root, *tmp;
-	while (p != nullptr)
-		if (p->left == nullptr) {
-			visit(p);
-			p = p->right;
-		}
-		else {
-			tmp = p->left;
-			while (tmp->right != nullptr && tmp->right != p) // go to the rightmost node of the left subtree or to the temporary parent of p;
-				tmp = tmp->right;
-			if (tmp->right == nullptr) // if 'true' rightmost node was reached, make it a temporary parent of the current root,
-			{
-				tmp->right = p;
-				p = p->left;
-			}
-			else { // else a temporary parent has been found; visit node p and then cut the right pointer of the current parent, whereby it ceases to be a parent;
-
-				visit(p);
-				tmp->right = nullptr;
-				p = p->right;
-			}
-		}
-}
+//template<class T>
+//void BST<T>::MorrisInorder() {
+//	BSTNode<T> *p = root, *tmp;
+//	while (p != nullptr)
+//		if (p->left == nullptr) {
+//			visit(p);
+//			p = p->right;
+//		}
+//		else {
+//			tmp = p->left;
+//			while (tmp->right != nullptr && tmp->right != p) // go to the rightmost node of the left subtree or to the temporary parent of p;
+//				tmp = tmp->right;
+//			if (tmp->right == nullptr) // if 'true' rightmost node was reached, make it a temporary parent of the current root,
+//			{
+//				tmp->right = p;
+//				p = p->left;
+//			}
+//			else { // else a temporary parent has been found; visit node p and then cut the right pointer of the current parent, whereby it ceases to be a parent;
+//
+//				visit(p);
+//				tmp->right = nullptr;
+//				p = p->right;
+//			}
+//		}
+//}
 
 template<class T>
   void BST<T>::insert(const T& el) {
@@ -307,8 +308,8 @@ void BST<T>::deleteByCopying(BSTNode<T>*& node) {
 		}
 		node->el = tmp->el;
 		if (previous == node)
-			previous ->left  = tmp->left;
-		else previous ->right = tmp->left;
+			previous->left  = tmp->left;
+		else previous->right = tmp->left;
 	}
 	delete tmp;
 }
