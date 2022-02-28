@@ -11,5 +11,6 @@
 
 int testDerivedTriangle();
 int testGenDLList();
+int stackQueue();
 
 #endif /* ASSIGNMENTS_ALLTESTS_H_ */

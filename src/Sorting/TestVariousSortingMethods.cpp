@@ -56,6 +56,12 @@ void selectionSort(double list[], int listSize)
 			list[currentMinIndex] = list[i];
 			list[i] = currentMin;
 		}
+
+
+		for(int i = 0; i < 8; i++) {
+			cout <<list[i]<<"\t";
+		}
+		cout << endl;
 	}
 }
 
@@ -193,9 +199,9 @@ void mergeSort(double list[], int begin, int end)
  */
 int testVariousSortingMethods()
 {
-
+	double a[] = {6, 0, 2, 1, 7, 8, 3, 5};
 	//double a[] = {5.0, 4.0, 3.0, 2.0, 1.0};
-	double a[] = {6.0, 10.0, 2.0, 1.0, 7.0, 8.0, 3.0, 5.0, 9.0, 0.0, 5.0};
+	//double a[] = {6.0, 10.0, 2.0, 1.0, 7.0, 8.0, 3.0, 5.0, 9.0, 0.0, 5.0};
 
 	cout <<"Input list ...\n";
 	for(int i = 0; i < sizeof(a)/sizeof(a[0]); i++) {
@@ -205,8 +211,8 @@ int testVariousSortingMethods()
 	SIZE = sizeof(a)/sizeof(a[0]);
 	// sizeof(a[0]) returns the data type size (of the first element).
 	//bubbleSort(a, sizeof(a)/sizeof(a[0]));
-	//selectionSort(a, sizeof(a)/sizeof(a[0]));
-	insertionSort(a, sizeof(a)/sizeof(a[0]));
+	selectionSort(a, sizeof(a)/sizeof(a[0]));
+	//insertionSort(a, sizeof(a)/sizeof(a[0]));
 	//quickSort(a, 0, sizeof(a)/sizeof(a[0])-1); // high = sizeof(a)/sizeof(a[0])-1, postion of the last element
 	//mergeSort(a, 0, sizeof(a)/sizeof(a[0])-1);
 	cout <<"Sorted Element List ...\n";
