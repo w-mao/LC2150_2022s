@@ -174,7 +174,7 @@ bool ArrayMaxHeap<ItemType>::isEmpty() const
 template<class ItemType>
 int ArrayMaxHeap<ItemType>::getHeight() const
 {
-   return ceil(log2(itemCount + 1));
+   return ceil(log2(itemCount + 1)-1);
 }  // end getHeight
 
 template<class ItemType>

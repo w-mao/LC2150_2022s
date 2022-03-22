@@ -138,7 +138,8 @@ void DoublyLinkedListA<T>::deleteNode(T el){
 
 			if (tmp != nullptr) {
 				tmp->prev->next = tmp->next;
-				tmp->next->prev = tmp->prev;
+				if(tmp->next != nullptr)
+					tmp->next->prev = tmp->prev;
 				if (tmp == tail)
 					tail = tmp->prev;
 				delete tmp;

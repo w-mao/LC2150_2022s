@@ -14,6 +14,7 @@ int testRepeatDigit ();
 int test_mystery ();
 int linkedListFun();
 int testLinkedBinaryTree();
+int testPriorityQueue();
 
 
 #endif /* LABS_ALLTESTS_H_ */

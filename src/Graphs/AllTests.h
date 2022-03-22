@@ -9,7 +9,7 @@
 #define GRAPHS_ALLTESTS_H_
 
 
-
+int testGraph();
 
 
 #endif /* GRAPHS_ALLTESTS_H_ */

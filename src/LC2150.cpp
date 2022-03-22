@@ -18,6 +18,11 @@
 #include "Stacks_and_Queues/AllTests.h"
 #include "Recursion/AllTests.h"
 #include "Sorting/AllTests.h"
+#include "Trees/AllTests.h"
+#include "Heaps_and_Priority_Queues/AllTests.h"
+#include "Maps_and_Hash_Tables/AllTests.h"
+#include "Graphs/AllTests.h"
+
 //#include "Recursion/ComputeFactorial.h"
 
 
@@ -84,19 +89,52 @@ int main() {
 	 * Sorting
 	 */
 
-	testVariousSortingMethods();
+	//testVariousSortingMethods();
+
+	/*
+	 *
+	 */
+	//testBST();
+	//testAVLTree();
+
+	/*
+	 * Heaps and Priority Queues
+	 */
+	//testPriorityQueue();
+	//testUnsortedPriorityQueue();
+	//ArrayHeapDriver();
+	//HeapPriorityQueueDriver();
+
+	/*
+	 * Maps and Hash Tables
+	 */
+	//testSTLMap();
+	//testHashMap();
+	//testHashingUsingBuckets();
+
+	/*
+	 * Graphs
+	 */
+
+	testGraph();
+
 
 	// Assign 0
 	//testDerivedTriangle();
 	//testGenDLList();
+	//stackQueue();
+	//heapSortDriver();
+
 
 	/*
 	 * Labs
 	 */
 	//findCombinations();
 	//testRepeatDigit ();
-	test_mystery ();
+	//test_mystery ();
 	//linkedListFun();
+	//testLinkedBinaryTree();
+	//testPriorityQueue();
 
 
 

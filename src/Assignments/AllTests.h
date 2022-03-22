@@ -12,5 +12,6 @@
 int testDerivedTriangle();
 int testGenDLList();
 int stackQueue();
+int heapSortDriver();
 
 #endif /* ASSIGNMENTS_ALLTESTS_H_ */

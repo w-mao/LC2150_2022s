@@ -1,5 +1,11 @@
-//  Created by Frank M. Carrano and Timothy M. Henry.
-//  Copyright (c) 2017 Pearson Education, Hoboken, New Jersey.
+/*
+ * 	Assignment #6, CPSC 2150
+ *
+ *	Author: Your Name
+ *  Comments : Describe what the code is doing in your own words.
+ *	Add comments to those lines that need explanations.
+ *  (3 points)
+ */
 
 #include <iostream>
 #include <string>
@@ -9,16 +15,19 @@ typedef string ItemType;
 
 int getLeftChildIndex(int nodeIndex)
 {
+   // Your code here (2 points)
    return (2 * nodeIndex) + 1;
 }  // end getLeftChildIndex
 
 int getRightChildIndex(int nodeIndex)
 {
+   // Your code here (2 points)
    return (2 * nodeIndex) + 2;
 }  // end getRightChildIndex
 
 int getParentIndex(int nodeIndex)
 {
+   // Your code here (2 points)
    return (nodeIndex - 1) / 2;
 }  // end getParentIndex
 
@@ -31,6 +40,9 @@ void heapRebuild(const int subTreeNodeIndex, ItemType items[], int itemCount)
 {
    if (!isLeaf(subTreeNodeIndex, itemCount))
    {
+	  /*
+	   * Your code here (7 points)
+	   */
       // Find larger child
       int leftChildIndex = getLeftChildIndex(subTreeNodeIndex);   // A left child must exist
       int largerChildIndex = leftChildIndex;                      // Make assumption about larger child
@@ -57,6 +69,9 @@ void heapRebuild(const int subTreeNodeIndex, ItemType items[], int itemCount)
 
 void display(ItemType anArray[], int n)
 {
+   /*
+    * Your code here (4 points)
+    */
    for (int i = 0; i < n; i++)
       cout << anArray[i] << " ";
 }  // end display
@@ -100,7 +115,7 @@ void heapSort(ItemType anArray[], int n)
    }  // end while
 }  // end heapSort
 
-int HeapSortDriver()
+int heapSortDriver()
 {
    string a[6] = {"D", "B", "A", "C", "F", "E"};
    heapSort(a, 6);
@@ -116,7 +131,7 @@ int HeapSortDriver()
    cout << " Sorted array" << endl;
 
    return 0;
-}  // end main
+}
 
 /*
  D B A C F E  Original array
