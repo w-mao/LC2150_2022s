@@ -22,6 +22,7 @@
 #include "Heaps_and_Priority_Queues/AllTests.h"
 #include "Maps_and_Hash_Tables/AllTests.h"
 #include "Graphs/AllTests.h"
+#include "Else/AllTests.h"
 
 //#include "Recursion/ComputeFactorial.h"
 
@@ -116,7 +117,7 @@ int main() {
 	 * Graphs
 	 */
 
-	testGraph();
+	//testGraph();
 
 
 	// Assign 0
@@ -136,7 +137,14 @@ int main() {
 	//testLinkedBinaryTree();
 	//testPriorityQueue();
 
+	/*
+	 * Else
+	 */
 
+	//patientManagement();
+	//testQuickSortExam();
+	//TestFinal();
+	testCommon_Count();
 
 	return 0;
 }
